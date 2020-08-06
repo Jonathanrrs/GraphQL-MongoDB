@@ -4,8 +4,8 @@ export const resolvers = {
         hello: () => {
             return 'Hello World with GraphQL'
         },
-        greet(root, {name}) {
-            console.log(name);
+        greet(root, {name}, ctx) {
+            console.log(ctx);
             return `Hello ${name}`
         },
         tasks() {
