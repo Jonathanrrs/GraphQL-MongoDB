@@ -16,7 +16,9 @@ app.get('/', (req, res) => {
 app.use('/graphql', graphqlHTTP({
     graphiql: true,
     schema: schema,
-
+    context: {
+        messageId: 'test'
+    }
 }));
 
 app.listen(3000, () => console.log('server running on port 3000'))
